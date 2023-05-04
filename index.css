@@ -4,6 +4,7 @@ body {
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
     body {
+        border: solid black 10px;
         width: 100%;
         height: 100%;
         background: rgb(0, 255, 217);
@@ -19,6 +20,7 @@ body {
     }
 
     #main_page_view {
+        border: solid black 2px;
         position: relative;
         overflow-y: scroll;
         height: 700px;
@@ -37,19 +39,23 @@ body {
     }
 
     #box1 {
-        background-image: url(/images/noLemonPledge.jpeg);
+        background-image: url(/images/Clean\ and\ Green\ logo\ 1.png);
+        border: solid black 2px;
     }
 
     #box2 {
-        background-image: url(/images/noLemonPledge.jpeg);
+        background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
+        border: solid black 2px;
     }
 
     #box3 {
-        background-image: url(/images/noLemonPledge.jpeg);
+        background-image: url(/images/images\ \(1\).jpeg);
+        border: solid black 2px;
     }
 
     #box4 {
-        background-image: url(/images/noLemonPledge.jpeg);
+        background-image: url(/images/Green\ Cleaning\ Technology.jpeg);
+        border: solid black 2px;
     }
 
     #footer_with_logos {
