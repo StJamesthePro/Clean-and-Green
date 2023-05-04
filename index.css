@@ -1,0 +1,12 @@
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .gfg-div {
+        width: 200px;
+        height: 200px;
+        background: red;
+        color: #fff;
+    }
+}
+
+body {
+    background: aqua;
+}
