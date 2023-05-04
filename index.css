@@ -19,6 +19,8 @@ body {
     }
 
     #main_page_view {
+        position: relative;
+        overflow-y: scroll;
         height: 700px;
         width: 100%;
         background-color: #2596aa;
