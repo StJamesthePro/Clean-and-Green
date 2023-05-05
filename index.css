@@ -13,8 +13,27 @@ body {
         flex-direction: column;
     }
 
+    .topnav {
+        overflow: hidden;
+        background-color: #4cd71d;
+    }
+
+    .inputbox {
+        float: right;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
     #search_function {
-        height: 50px;
+        /* height: 50px; */
         width: 100%;
         background-color: #2ab600;
     }
@@ -39,23 +58,50 @@ body {
     }
 
     #box1 {
-        background-image: url(/images/Clean\ and\ Green\ logo\ 1.png);
+        background-image: url(/images/ecofriendly-bottled-cleaning-products-reusable-260nw-1846376173.webp);
         border: solid black 2px;
+        width: 229px;
+        height: 100px;
+
+    }
+
+    mark {
+        position: relative;
+    }
+
+    mark::before {
+        /* Highlight color */
+        background-color: #46b96c;
+
+        content: "";
+        position: absolute;
+        width: calc(100% + 4px);
+        height: 60%;
+        left: -2px;
+        bottom: 0;
+        z-index: -1;
+        transform: rotate(-2deg);
     }
 
     #box2 {
-        background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
+        background-image: url(/images/Green\ Cleaning\ Technology.jpeg);
         border: solid black 2px;
+        width: 229px;
+        height: 100px;
     }
 
     #box3 {
         background-image: url(/images/images\ \(1\).jpeg);
         border: solid black 2px;
+        width: 229px;
+        height: 100px;
     }
 
     #box4 {
-        background-image: url(/images/Green\ Cleaning\ Technology.jpeg);
+        background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
         border: solid black 2px;
+        width: 229px;
+        height: 100px;
     }
 
     #footer_with_logos {
@@ -63,4 +109,5 @@ body {
         width: 100%;
         background-color: #c212e1;
     }
+
 }
