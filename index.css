@@ -2,7 +2,7 @@ body {
     background: rgb(255, 0, 0);
 }
 
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+@media screen and (device-width: 390px) and (device-height: 844px) and (orientation: portrait) {
     body {
         border: solid black 10px;
         width: 100%;
