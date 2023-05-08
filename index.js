@@ -1,8 +1,8 @@
 // Get the button element from the DOM
-const multipurposeButton = document.getElementById('box1');
-const dishesButton = document.getElementById('box2');
-const bodyodyButton = document.getElementById('box3');
-const outdoorButton = document.getElementById('box4');
+const multipurposeButton = document.getElementById('multiButton');
+const dishesButton = document.getElementById('dishesButton');
+const bodyodyButton = document.getElementById('topicalButton');
+const outdoorButton = document.getElementById('outdoorButton');
 const anotherButton = document.getElementById('search_button');
 
 
