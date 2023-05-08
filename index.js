@@ -1,9 +1,9 @@
 // Get the button element from the DOM
-const button1 = document.getElementById('box1');
-const button2 = document.getElementById('box2');
-const button3 = document.getElementById('box3');
-const button4 = document.getElementById('box4');
-const button5 = document.getElementById('search_button');
+const multipurposeButton = document.getElementById('box1');
+const dishesButton = document.getElementById('box2');
+const bodyodyButton = document.getElementById('box3');
+const outdoorButton = document.getElementById('box4');
+const anotherButton = document.getElementById('search_button');
 
 
 
@@ -25,23 +25,28 @@ for (i = 0; i < acc.length; i++) {
 
 
 // Add a click event listener to the buttons
-button1.addEventListener('click', function () {
+multipurposeButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
-    console.log('Button1 clicked!');
+    fetch("https://clean-and-greeen-back.onrender.com/multipurpose")
+        .then(res => res.json)
+        .then(data => {
+            return multipurposeItem = data
+        })
+    console.log(multipurposeItem);
 });
-button2.addEventListener('click', function () {
+dishesButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     console.log('Button2 clicked!');
 });
-button3.addEventListener('click', function () {
+bodyodyButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     console.log('Button3 clicked!');
 });
-button4.addEventListener('click', function () {
+outdoorButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     console.log('Button4 clicked!');
 });
-button5.addEventListener('click', function () {
+anotherButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     console.log('Button5 clicked!');
 });
