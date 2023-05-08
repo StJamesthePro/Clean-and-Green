@@ -8,13 +8,13 @@ const anotherButton = document.getElementById('search_button');
 
 
 // Add functionality to toggle the accordion panel when the button is clicked
-var acc = document.getElementsByClassName("accordion");
-var i;
+let acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
@@ -22,7 +22,6 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
-
 
 // Add a click event listener to the buttons
 multipurposeButton.addEventListener('click', function () {
@@ -41,20 +40,56 @@ multipurposeButton.addEventListener('click', function () {
 });
 dishesButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
-    console.log('Button2 clicked!');
+    let data; // declare data variable
+    fetch('https://clean-and-greeen-back.onrender.com/detergent')
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData;
+            console.log(data);
+        })
+        .catch(error => console.error(error));
+    console.log(data);
+
 });
+
 bodyodyButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
-    console.log('Button3 clicked!');
+    let data; // declare data variable
+    fetch('https://clean-and-greeen-back.onrender.com/topical')
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData;
+            console.log(data);
+        })
+        .catch(error => console.error(error));
+    console.log(data);
+    
 });
+
 outdoorButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
-    console.log('Button4 clicked!');
+    let data; // declare data variable within this function
+    fetch('https://clean-and-greeen-back.onrender.com/outdoor')
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData;
+            console.log(data);
+        })
+        .catch(error => console.error(error));
+    console.log(data);
 });
-anotherButton.addEventListener('click', function () {
-    // Code to execute when the button is clicked
-    console.log('Button5 clicked!');
-});
+// anotherButton.addEventListener('click', function () {
+//     // Code to execute when the button is clicked
+//     let data; // declare data variable
+//     fetch('https://clean-and-greeen-back.onrender.com/')
+//         .then(res => res.json())
+//         .then(responseData => {
+//             data = responseData;
+//             console.log(data);
+//         })
+//         .catch(error => console.error(error));
+//     console.log(data);
+// });
 
 
 //ADDING INFORMATION TO THE SCROLL LIST
@@ -81,22 +116,22 @@ const container = document.querySelector('.scrollspy-example');
 // Dynamically add a new panel when new data is added
 function addPanel(title, content) {
     // Create a new button and panel
-    var button = document.createElement("button");
+    let button = document.createElement("button");
     button.className = "accordion";
     button.innerHTML = title;
-    var panel = document.createElement("div");
+    let panel = document.createElement("div");
     panel.className = "panel";
     panel.innerHTML = content;
 
     // Add the button and panel to the container
-    var container = document.getElementById("panel-container");
+    let container = document.getElementById("panel-container");
     container.appendChild(button);
     container.appendChild(panel);
 
     // Add the click event listener to the new button
     button.addEventListener("click", function () {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
