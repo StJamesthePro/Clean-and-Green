@@ -26,6 +26,7 @@ for (i = 0; i < acc.length; i++) {
 // Add a click event listener to the buttons
 multipurposeButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
+    panelContainer.innerHTML = null
     let data; // declare data variable
     fetch('https://clean-and-greeen-back.onrender.com/multipurpose')
         .then(res => res.json())
@@ -43,6 +44,7 @@ multipurposeButton.addEventListener('click', function () {
 });
 dishesButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
+    panelContainer.innerHTML = null
     let data; // declare data variable
     fetch('https://clean-and-greeen-back.onrender.com/detergent')
         .then(res => res.json())
@@ -61,6 +63,7 @@ dishesButton.addEventListener('click', function () {
 
 bodyodyButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
+    panelContainer.innerHTML = null
     let data; // declare data variable
     fetch('https://clean-and-greeen-back.onrender.com/topical')
         .then(res => res.json())
@@ -78,6 +81,7 @@ bodyodyButton.addEventListener('click', function () {
 
 outdoorButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
+    panelContainer.innerHTML = null
     let data; // declare data variable within this function
     fetch('https://clean-and-greeen-back.onrender.com/outdoor')
         .then(res => res.json())
@@ -127,6 +131,7 @@ const container = document.querySelector('.scrollspy-example');
 
 
 // Dynamically add a new panel when new data is added
+let panelContainer = document.getElementById("panel-container");
 function addPanel(title, content) {
     // Create a new button and panel
     let button = document.createElement("button");
@@ -137,9 +142,8 @@ function addPanel(title, content) {
     panel.innerHTML = content;
 
     // Add the button and panel to the container
-    let container = document.getElementById("panel-container");
-    container.appendChild(button);
-    container.appendChild(panel);
+    panelContainer.appendChild(button);
+    panelContainer.appendChild(panel);
 
     // Add the click event listener to the new button
     button.addEventListener("click", function () {
