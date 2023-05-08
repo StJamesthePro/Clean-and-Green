@@ -32,6 +32,9 @@ multipurposeButton.addEventListener('click', function () {
         .then(responseData => {
             data = responseData; // assign responseData to data variable
             console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe) 
+            });
         })
         .catch(error => console.error(error)); // handle any errors in the promise chain
     // data variable is accessible here
@@ -46,6 +49,10 @@ dishesButton.addEventListener('click', function () {
         .then(responseData => {
             data = responseData;
             console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe)
+            });
+            
         })
         .catch(error => console.error(error));
     console.log(data);
@@ -60,6 +67,9 @@ bodyodyButton.addEventListener('click', function () {
         .then(responseData => {
             data = responseData;
             console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe)
+            });
         })
         .catch(error => console.error(error));
     console.log(data);
@@ -74,6 +84,9 @@ outdoorButton.addEventListener('click', function () {
         .then(responseData => {
             data = responseData;
             console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe)
+            });
         })
         .catch(error => console.error(error));
     console.log(data);
