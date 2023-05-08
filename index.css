@@ -58,7 +58,7 @@ body {
         height: 100px;
     }
 
-    #box1 {
+    #multiButton {
         background-image: url(/images/ecofriendly-bottled-cleaning-products-reusable-260nw-1846376173.webp);
         border: solid black 2px;
         width: 229px;
@@ -84,21 +84,21 @@ body {
         transform: rotate(-2deg);
     }
 
-    #box2 {
+    #dishesButton {
         background-image: url(/images/Green\ Cleaning\ Technology.jpeg);
         border: solid black 2px;
         width: 229px;
         height: 100px;
     }
 
-    #box3 {
+    #topicalButton {
         background-image: url(/images/images\ \(1\).jpeg);
         border: solid black 2px;
         width: 229px;
         height: 100px;
     }
 
-    #box4 {
+    #outdoorButton {
         background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
         border: solid black 2px;
         width: 229px;
@@ -217,7 +217,7 @@ body {
         height: 100px;
     }
 
-    #box1 {
+    #multiButton {
         background-image: url(/images/ecofriendly-bottled-cleaning-products-reusable-260nw-1846376173.webp);
         border: solid black 2px;
         width: 50%;
@@ -243,21 +243,21 @@ body {
         transform: rotate(-2deg);
     }
 
-    #box2 {
+    #dishesButton {
         background-image: url(/images/Green\ Cleaning\ Technology.jpeg);
         border: solid black 2px;
         width: 50%;
         height: 100px;
     }
 
-    #box3 {
+    #topicalButton {
         background-image: url(/images/images\ \(1\).jpeg);
         border: solid black 2px;
         width: 50%;
         height: 100px;
     }
 
-    #box4 {
+    #outdoorButton {
         background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
         border: solid black 2px;
         width: 50%;
