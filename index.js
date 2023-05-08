@@ -27,12 +27,17 @@ for (i = 0; i < acc.length; i++) {
 // Add a click event listener to the buttons
 multipurposeButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
-    fetch("https://clean-and-greeen-back.onrender.com/multipurpose")
-        .then(res => res.json)
-        .then(data => {
-            return multipurposeItem = data
+    let data; // declare data variable
+    fetch('https://clean-and-greeen-back.onrender.com/multipurpose')
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData; // assign responseData to data variable
+            console.log(data);
         })
-    console.log(multipurposeItem);
+        .catch(error => console.error(error)); // handle any errors in the promise chain
+    // data variable is accessible here
+    console.log(data);
+
 });
 dishesButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
