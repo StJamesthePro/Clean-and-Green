@@ -3,7 +3,9 @@ const multipurposeButton = document.getElementById('multiButton');
 const dishesButton = document.getElementById('dishesButton');
 const bodyodyButton = document.getElementById('topicalButton');
 const outdoorButton = document.getElementById('outdoorButton');
-const anotherButton = document.getElementById('search_button'); const container = document.querySelector('.scrollspy-example');
+const searchButton = document.getElementById('search_button');
+const container = document.querySelector('.scrollspy-example');
+
 
 
 
@@ -93,6 +95,61 @@ outdoorButton.addEventListener('click', function () {
         .catch(error => console.error(error));
     console.log(data);
 });
+
+
+const form = document.querySelector('form.example');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const input = document.querySelector('input[name="search"]');
+  const inputValue = input.value;
+  panelContainer.innerHTML = null
+    let data; // declare data variable within this function
+    fetch(`https://clean-and-greeen-back.onrender.com/search/${inputValue}`)
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData;
+            console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe)
+            });
+        })
+        .catch(error => console.error(error));; // or do something else with the value
+});
+// searchButton.addEventListener('click', function () {
+//     // Code to execute when the button is clicked
+//     let query = 
+//     fetch('https://clean-and-greeen-back.onrender.com/')
+//         .then(res => res.json())
+//         .then(responseData => {
+//             data = responseData;
+//             console.log(data);
+//         })
+//         .catch(error => console.error(error));
+//     console.log(data);
+// });
+
+
+//ADDING INFORMATION TO THE SCROLL LIST
+// Create a new HTML element
+// const newElement = document.createElement('p');
+// const newHeading = document.createElement('h4');
+// const newElement2 = document.createElement('p');
+// const newHeading2 = document.createElement('h4');
+// newHeading.textContent = 'This is a New Header';
+// newElement.textContent = 'This is some new content!';
+// newHeading2.textContent = 'This is another New Header';
+// newElement2.textContent = 'This is some more new content!';
+
+// Find the container where you want to append the new element
+
+
+// Append the new element to the container
+// container.appendChild(newHeading);
+// container.appendChild(newElement);
+// container.appendChild(newHeading2);
+// container.appendChild(newElement2);
+
+
 
 // Dynamically add a new panel when new data is added
 let panelContainer = document.getElementById("panel-container");
