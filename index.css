@@ -1,5 +1,6 @@
 @media screen and (min-device-width: 480px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 1) {
 
+
     body {
         border: solid black 10px;
         width: 100%;
@@ -54,8 +55,11 @@
         height: 100px;
     }
 
-    #box1 {
+
+
+    #multiButton {
         background-image: url(/images/MultipurposeCleaner.jpeg);
+
         border: solid black 2px;
         width: 50%;
         height: 100px;
@@ -80,22 +84,22 @@
         transform: rotate(-2deg);
     }
 
-    #box2 {
-        background-image: url(/images/Dishes\ and\ Laundry.jpeg);
+    #dishesButton {
+        background-image: url(/images/Laundry\ Detergent\ 1.jpeg);
         border: solid black 2px;
         width: 50%;
         height: 100px;
     }
 
-    #box3 {
-        background-image: url(/images/HomeMadeSoap.jpeg);
+    #topicalButton {
+        background-image: url(/images/images\ \(1\).jpeg);
         border: solid black 2px;
         width: 50%;
         height: 100px;
     }
 
-    #box4 {
-        background-image: url(/images/Outdoor.jpeg);
+    #outdoorButton {
+        background-image: url(/images/css\ eco\ friendly\ 2.jpeg);
         border: solid black 2px;
         width: 50%;
         height: 100px;
