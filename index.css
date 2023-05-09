@@ -5,7 +5,7 @@
         border: solid black 10px;
         width: 100%;
         height: 100%;
-        background: rgb(0, 255, 217);
+        background: rgb(0, 190, 80);
         color: #000000;
         flex: content;
         flex-direction: column;
@@ -40,7 +40,7 @@
         height: 700px;
         width: 100%;
         /* background-color: #2596aa; */
-        background-color: rgb(0, 255, 247);
+        background-color: rgba(0, 255, 145, 0.855);
         /* For browsers that do not support gradients */
         background-image: linear-gradient(to bottom right, #96dd7e, #dfb744);
     }
