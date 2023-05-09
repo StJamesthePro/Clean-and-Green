@@ -110,7 +110,7 @@ form.addEventListener('submit', function(event) {
             data = responseData;
             console.log(data);
             data.forEach(element => {
-                addPanel(element.name,element.recipe)
+                addPanel(element.name,element.recipe, element.ingredients)
             });
         })
         .catch(error => console.error(error));; // or do something else with the value
