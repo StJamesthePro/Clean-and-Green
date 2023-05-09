@@ -12,6 +12,7 @@
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     header {
+        font-size: 30px;
         padding: 10px;
         display: flex;
         justify-content: end;
