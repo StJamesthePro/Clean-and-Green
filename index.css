@@ -44,6 +44,7 @@
         /* For browsers that do not support gradients */
         background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(1, 116, 34));
     }
+    
 
     #search_catagories {
         height: 200px;
