@@ -4,6 +4,8 @@ const dishesButton = document.getElementById('dishesButton');
 const bodyodyButton = document.getElementById('topicalButton');
 const outdoorButton = document.getElementById('outdoorButton');
 const searchButton = document.getElementById('search_button');
+const container = document.querySelector('.scrollspy-example');
+
 
 
 
@@ -34,7 +36,7 @@ multipurposeButton.addEventListener('click', function () {
             data = responseData; // assign responseData to data variable
             console.log(data);
             data.forEach(element => {
-                addPanel(element.name,element.recipe) 
+                addPanel(element.name, element.recipe, element.ingredients)
             });
         })
         .catch(error => console.error(error)); // handle any errors in the promise chain
@@ -52,15 +54,14 @@ dishesButton.addEventListener('click', function () {
             data = responseData;
             console.log(data);
             data.forEach(element => {
-                addPanel(element.name,element.recipe)
+                addPanel(element.name, element.recipe, element.ingredients)
             });
-            
+
         })
         .catch(error => console.error(error));
     console.log(data);
 
 });
-
 bodyodyButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     panelContainer.innerHTML = null
@@ -71,14 +72,13 @@ bodyodyButton.addEventListener('click', function () {
             data = responseData;
             console.log(data);
             data.forEach(element => {
-                addPanel(element.name,element.recipe)
+                addPanel(element.name, element.recipe, element.ingredients)
             });
         })
         .catch(error => console.error(error));
     console.log(data);
-    
-});
 
+});
 outdoorButton.addEventListener('click', function () {
     // Code to execute when the button is clicked
     panelContainer.innerHTML = null
@@ -89,12 +89,13 @@ outdoorButton.addEventListener('click', function () {
             data = responseData;
             console.log(data);
             data.forEach(element => {
-                addPanel(element.name,element.recipe)
+                addPanel(element.name, element.recipe, element.ingredients)
             });
         })
         .catch(error => console.error(error));
     console.log(data);
 });
+
 
 const form = document.querySelector('form.example');
 form.addEventListener('submit', function(event) {
@@ -140,7 +141,7 @@ form.addEventListener('submit', function(event) {
 // newElement2.textContent = 'This is some more new content!';
 
 // Find the container where you want to append the new element
-const container = document.querySelector('.scrollspy-example');
+
 
 // Append the new element to the container
 // container.appendChild(newHeading);
@@ -149,20 +150,30 @@ const container = document.querySelector('.scrollspy-example');
 // container.appendChild(newElement2);
 
 
+
 // Dynamically add a new panel when new data is added
 let panelContainer = document.getElementById("panel-container");
-function addPanel(title, content) {
+function addPanel(title, content, ingredients) {
     // Create a new button and panel
     let button = document.createElement("button");
     button.className = "accordion";
     button.innerHTML = title;
     let panel = document.createElement("div");
     panel.className = "panel";
-    panel.innerHTML = content;
+    let listHTML = '<ol>';
+    for (let i = 0; i < ingredients.length; i++) {
+        listHTML += '<li>' + ingredients[i] + '</li>';
+    }
+    listHTML += '</ol>';
+
+    panel.innerHTML = "Ingredients:" + listHTML + "Recipe: " + "<br>" + content;
+
+
 
     // Add the button and panel to the container
     panelContainer.appendChild(button);
     panelContainer.appendChild(panel);
+    // panelContainer.appendChild(recipePanel);
 
     // Add the click event listener to the new button
     button.addEventListener("click", function () {
@@ -174,19 +185,5 @@ function addPanel(title, content) {
             panel.style.display = "block";
         }
     });
+
 }
-
-// Example usage of the addPanel function
-
-
-// addPanel("Section 2", "<p>I will type words here</p>");
-// addPanel("Section 3", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 4", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 5", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 6", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 7", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 8", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 9", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 10", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 11", "<p>Content for section 3 goes here.</p>");
-// addPanel("Section 12", "<p>Content for section 3 goes here.</p>");
