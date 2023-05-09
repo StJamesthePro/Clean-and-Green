@@ -166,7 +166,7 @@ function addPanel(title, content, ingredients) {
     }
     listHTML += '</ol>';
 
-    panel.innerHTML = "Ingredients:" + listHTML + "Recipe: " + "<br>" + content;
+    panel.innerHTML = "<h2>Ingredients:</h1>" + listHTML + "<h1>Recipe: </h1>" + "<br>" + content;
 
 
 
