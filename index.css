@@ -44,6 +44,7 @@
         /* For browsers that do not support gradients */
         background-image: linear-gradient(to bottom right, #96dd7e, #dfb744);
     }
+    
 
     #search_catagories {
         height: 200px;
