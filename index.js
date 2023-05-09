@@ -3,7 +3,7 @@ const multipurposeButton = document.getElementById('multiButton');
 const dishesButton = document.getElementById('dishesButton');
 const bodyodyButton = document.getElementById('topicalButton');
 const outdoorButton = document.getElementById('outdoorButton');
-const anotherButton = document.getElementById('search_button');
+const searchButton = document.getElementById('search_button');
 
 
 
@@ -95,9 +95,28 @@ outdoorButton.addEventListener('click', function () {
         .catch(error => console.error(error));
     console.log(data);
 });
-// anotherButton.addEventListener('click', function () {
+
+const form = document.querySelector('form.example');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const input = document.querySelector('input[name="search"]');
+  const inputValue = input.value;
+  panelContainer.innerHTML = null
+    let data; // declare data variable within this function
+    fetch(`https://clean-and-greeen-back.onrender.com/search/${inputValue}`)
+        .then(res => res.json())
+        .then(responseData => {
+            data = responseData;
+            console.log(data);
+            data.forEach(element => {
+                addPanel(element.name,element.recipe)
+            });
+        })
+        .catch(error => console.error(error));; // or do something else with the value
+});
+// searchButton.addEventListener('click', function () {
 //     // Code to execute when the button is clicked
-//     let data; // declare data variable
+//     let query = 
 //     fetch('https://clean-and-greeen-back.onrender.com/')
 //         .then(res => res.json())
 //         .then(responseData => {
